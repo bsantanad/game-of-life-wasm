@@ -5,8 +5,8 @@
 this project was done following this guide: [rust book][guide], also
 it was done by using this template: [wasm-pack-template][temp]
 
-the purpose was to learn webassembly and rust, how they interact together
-and what can be done with it
+the purpose was to learn webassembly and rust, learn how they interact together
+and what can be done with them
 
 ## install
 
