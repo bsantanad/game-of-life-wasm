@@ -92,6 +92,16 @@ impl Universe{
         self.cells = next;
     }
 
+    // clean cells and set width and height
+    pub fn set_width(&mut self, width: u32) {
+        self.width = width;
+        self.cells = (0..width * self.height).map(|_i| Cell::Dead).collect();
+    }
+    pub fn set_height(&mut self, height: u32) {
+        self.height = height;
+        self.cells = (0..self.width * height).map(|_i| Cell::Dead).collect();
+    }
+
     // init universe
     pub fn new() -> Universe {
         let width = 64;
@@ -133,3 +143,20 @@ impl fmt::Display for Universe {
         Ok(())
     }
 }
+
+impl Universe { 
+    /// get the entire universe
+    pub fn get_cells(&self) -> &[Cell] {
+        &self.cells
+    }
+
+    /// set cells to alive by passing an array of cells
+    pub fn set_cells(&mut self, cells: &[(u32, u32)]) {
+        for (row, col) in cells.iter().cloned() {
+            let idx = self.get_index(row, col);
+            self.cells[idx] = Cell::Alive;
+        }
+    }
+
+}
+
