@@ -1,6 +1,6 @@
 # game of life w/ rust and webassembly
 
-## acknowledge
+## acknowledgement
 
 this project was done following this guide: [rust book][guide], also
 it was done by using this template: [wasm-pack-template][temp]
@@ -8,7 +8,7 @@ it was done by using this template: [wasm-pack-template][temp]
 the purpose was to learn webassembly and rust, how they interact together
 and what can be done with it
 
-# install
+## install
 
 **IMPORTANT**: you'll need rust, cargo and npm installed in your machine 
 
@@ -32,8 +32,8 @@ npm i
 npm run start
 ```
 
-# usage
-open a browser go to `localhost:8080`
+## usage
+open a browser and go to `localhost:8080`
 
 [guide]: https://rustwasm.github.io/book/introduction.html
 [temp]: https://github.com/rustwasm/wasm-pack-template
